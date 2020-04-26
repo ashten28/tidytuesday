@@ -1,4 +1,4 @@
-# Tidytuesday Collection
+# TidyTuesday Collection
 
 Learn more here : https://github.com/rfordatascience/tidytuesday
 
