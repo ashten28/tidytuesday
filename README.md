@@ -4,4 +4,4 @@ Learn more here : https://github.com/rfordatascience/tidytuesday
 
 ## 2020-04-17: GDPR Violations
 
-<!-- ![Alt text](stop_procrastinating.png?raw=true "Title") -->
+![Alt text](2020-04-17/gdpr_plot.png?raw=true "Title") 
