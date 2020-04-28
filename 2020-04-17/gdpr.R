@@ -82,7 +82,8 @@ ggplot(countries_prices_relevel, aes(x =name, y = n)) +
   labs(
     title = "**GDPR <span style='color:#3986A6;'> total fine amount (€)</span> and counts by country**",
     subtitle = "France recorded the largest total fine amount and Spain recorded the highest fine count",
-    y = "Fine count"
+    y = "Fine count",
+    caption = "Data source: https://www.privacyaffairs.com/gdpr-fines  |  Github: ashten28"
   ) +
   # comment box regarding Google Inc. fine proportion in France
   annotate(
@@ -120,6 +121,7 @@ ggplot(countries_prices_relevel, aes(x =name, y = n)) +
     axis.ticks.x = element_line(colour = my_palette[[8]]),
     plot.title = element_markdown(lineheight = 1.3, size = 21),
     plot.subtitle = element_markdown(lineheight = 1.3, size = 20),
+    plot.caption = element_text(hjust = 1, size = 11.5),
     axis.text = element_text(colour = my_palette[[8]], size = 16),
     plot.background = element_rect(fill = my_palette[[3]]),
     panel.background = element_rect(fill= my_palette[[3]]),
