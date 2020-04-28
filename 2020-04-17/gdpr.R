@@ -52,7 +52,7 @@ my_palette <-
 ggplot(countries_prices_relevel, aes(x =name, y = n)) +
   # dotted grey lines to point to total fine amount by country
   geom_segment(
-    aes(x = name, xend = name, y = n + 2, yend = 71),
+    aes(x = name, xend = name, y = n + 2, yend = 69.4),
     colour = my_palette[[8]],
     linetype = "dashed",
     alpha = 0.3
@@ -75,28 +75,29 @@ ggplot(countries_prices_relevel, aes(x =name, y = n)) +
     mapping = aes(y = 70, label = price_label),
     nudge_y = 4.3,
     colour = my_palette[[9]],
-    hjust = 1
+    hjust = 1,
+    size = 6
   ) + 
   # add title and subtitle (ggtext)
   labs(
     title = "**GDPR <span style='color:#3986A6;'> total fine amount (€)</span> and counts by country**",
     subtitle = "France recorded the largest total fine amount and Spain recorded the highest fine count",
-    y = "\nFine count"
+    y = "Fine count"
   ) +
   # comment box regarding Google Inc. fine proportion in France
   annotate(
     "richtext",
-    x = 9, y = 13,
+    x = 8.5, y = 13,
     hjust = 0, vjust = 1,
     label = 
-      "<span style='font-size:13pt'>France suffered the largest total fine amount where <br>
+      "<span style='font-size:19pt'>France suffered the largest total fine amount where <br>
        <span style='color:#4285f4;'>G</span><span style='color:#ea4335;'>o</span><span style='color:#fbbc05;'>o</span><span style='color:#4285f4;'>g</span><span style='color:#34a853;'>l</span><span style='color:#ea4335;'>e</span>
        was responsible for 98% of it"
   ) + 
   # line pointer
   annotate(
     "curve",
-    x = 9,
+    x = 8.5,
     xend = 10,
     y = 13,
     yend = 7.5,
@@ -114,12 +115,12 @@ ggplot(countries_prices_relevel, aes(x =name, y = n)) +
   theme(
     legend.position = "none",
     axis.title.y = element_blank(),
-    axis.title.x = element_text(colour = my_palette[[7]], hjust = 0.5),
+    axis.title.x = element_text(colour = my_palette[[7]], hjust = 0.5, size = 16),
     axis.ticks.y = element_blank(),
     axis.ticks.x = element_line(colour = my_palette[[8]]),
-    plot.title = element_markdown(lineheight = 1.3, size = 15),
-    plot.subtitle = element_markdown(lineheight = 1.3),
-    axis.text = element_text(colour = my_palette[[8]], size = 11),
+    plot.title = element_markdown(lineheight = 1.3, size = 21),
+    plot.subtitle = element_markdown(lineheight = 1.3, size = 20),
+    axis.text = element_text(colour = my_palette[[8]], size = 16),
     plot.background = element_rect(fill = my_palette[[3]]),
     panel.background = element_rect(fill= my_palette[[3]]),
     axis.line.x = element_line(colour = my_palette[[2]]),
