@@ -131,4 +131,4 @@ ggplot(countries_prices_relevel, aes(x =name, y = n)) +
   )
 
 # save ggplot
-ggsave(filename = "2020-04-17/gdpr_plot.png", width = 16, height = 11)
+ggsave(filename = "2020-04-21/gdpr_plot.png", width = 16, height = 11)
