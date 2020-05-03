@@ -1,4 +1,5 @@
 # libraries
+library(here)
 library(readr)
 library(dplyr)
 library(tidyr)
@@ -76,14 +77,15 @@ ggplot(top_grosses_trend) +
   labs(
     title = "**Cumulative weekly gross of top 10 grossing Broadway <span style='color:#3986A6;'>shows</span>.**",
     subtitle = "The Lion King has the largest gross and The Phantom of the Opera has the longest run",
-    y = "Cumulative weekly gross\n",
+    # y = "Cumulative weekly gross\n",
     caption = "Data: www.playbill.com  |  Github: ashten28"
   ) +
   # theme
   theme(
     legend.position = "none",
     axis.title.x = element_blank(),
-    axis.title.y = element_text(colour = my_palette[[7]], hjust = 1, size = 12),
+    # axis.title.y = element_text(colour = my_palette[[7]], hjust = 1, size = 12),
+    axis.title.y = element_blank(),
     axis.ticks.y = element_blank(),
     axis.ticks.x = element_line(colour = my_palette[[8]]),
     strip.text = element_text(colour = my_palette[[9]], face = "bold", hjust = 0, vjust = 1, size = 13),
@@ -102,4 +104,4 @@ ggplot(top_grosses_trend) +
   )
 
 # save ggplot
-ggsave(filename = "2020-04-28/broadway_plot.png", width = 16, height = 9)
+ggsave(filename = here("2020-04-28/broadway_plot.png"), width = 16, height = 9)
