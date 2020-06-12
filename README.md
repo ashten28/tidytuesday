@@ -10,6 +10,6 @@ Learn more here : https://github.com/rfordatascience/tidytuesday
 
 ![Alt text](2020-04-28/broadway_plot.png?raw=true "broadway") 
 
-## 2020-04-28: Volcano Eruptions
+## 2020-05-12: Volcano Eruptions
 
 ![Alt text](2020-05-12/volcano_plot.png?raw=true "volcano") 
