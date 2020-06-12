@@ -12,4 +12,4 @@ Learn more here : https://github.com/rfordatascience/tidytuesday
 
 ## 2020-04-28: Volcano Eruptions
 
-![Alt text](2020-005-12/volcano_plot.png?raw=true "volcano") 
+![Alt text](2020-05-12/volcano_plot.png?raw=true "volcano") 

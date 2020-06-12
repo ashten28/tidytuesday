@@ -18,15 +18,18 @@ my_palette <-
 # display my pallete
 scales::show_col(my_palette)
 
+# get map data - polygon
 world_map <- 
   map_data("world") %>% 
   mutate(paint = if_else(region == "Malaysia", "YES", "NO"))
 
+# ggplot
 ggplot(data = volcano) +
+  # geometrics (polygon - country border, point - volcano)
   geom_polygon(data = world_map, aes(x = long, y = lat, group = group, fill = factor(paint)), colour = paste0(my_palette[[1]], 80), size = 0.1) + 
   geom_point(aes(y = latitude, x = longitude), shape = 17, colour = "darkred", size = 2) +
   scale_fill_manual(values = c(paste0(my_palette[[9]], "30"), my_palette[[9]])) +
-  coord_sf(xlim = c(90.74, 129.5), ylim = c(-9.9, 23), expand = FALSE) +
+  coord_sf(xlim = c(90.74, 129.5), ylim = c(-9.9, 23), expand = FALSE) + # crop map to desired area
   labs(
     title = "**Volcanos around <span style='color:#3986A6;'>Malaysia</span>.**",
     caption = "Source: The Smithsonian Institution  |  Github: ashten28"
