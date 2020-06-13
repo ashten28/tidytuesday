@@ -44,12 +44,14 @@ marbles_rank <-
     team_name = fct_reorder(team_name, -points_sum)
   )
 
+# get first race ranks to visualize between halves
 marbles_rank_firstrace <- 
   marbles_rank %>% 
   filter(race_num == 1) %>% 
   select(team_name) %>%  
   mutate(half  = if_else(row_number() <= 8, "tophalf", "bottomhalf"))
 
+# join rank havles with data
 marbles_rank_add <-
   left_join(
     x = marbles_rank, 
@@ -57,8 +59,6 @@ marbles_rank_add <-
     b = "team_name"
   )
     
-gen_pal <- colorRampPalette(colors = my_palette[c(9, 6)])
-
 # ggplot
 ggplot(
   data = marbles_rank_add
