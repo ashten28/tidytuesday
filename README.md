@@ -2,7 +2,7 @@
 
 Learn more here : https://github.com/rfordatascience/tidytuesday
 
-## 2020-05-12: Volcano Eruptions
+## 2020-06-02: Marble Racing
 
 ![Alt text](2020-06-02/marble_plot.png?raw=true "marble") 
 
