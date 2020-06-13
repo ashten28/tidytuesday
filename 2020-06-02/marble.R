@@ -92,7 +92,7 @@ ggplot(
     breaks = 1:16
   ) +
   labs(
-    title = "**<span style='color:#3986A6;'>Marbula One</span> championship ranking over time**",
+    title = "**<span style='color:#3986A6;'>Marbula One</span> race ranking over time**",
     subtitle = "Raspberry Racers and Team Momo are the only two teams to finish in different rank halves than they started in.",
     caption = "Source: Jelle's Marble Run  |  Github: ashten28"
   )  + 
